@@ -1,0 +1,223 @@
+.btn,
+.cut {
+	position:absolute;
+	background: url(chrome-extension://__MSG_@@extension_id__/sprite.png) 0 / 32px no-repeat content-box;
+}
+.id3btn,
+.cut {
+	top: 0;
+	bottom: 0;
+	width: 16px;
+	height: 16px;
+	margin: auto 0 auto -2px;
+	background-position: 0% 75%;
+	image-rendering: -webkit-optimize-contrast;
+	padding: 2px;
+}
+.current.fl_l .id3btn,
+.current.fl_l .cut {
+	background-position: 100% 75%;
+}
+.audio .btn.cut {
+	content: '';
+	opacity: .4;
+	right: 0;
+	width: 16px;
+	margin: auto 8px;
+	background-position-y: 100%;
+}
+.verbal {
+	color: grey;
+	width: auto;
+	height: 1.8em;
+	line-height: 1;
+	font-size: .9em;
+	background: none;
+	text-align: center;
+	margin: auto;
+	padding: 0;
+}
+.verbal:hover {
+	text-decoration: none;
+	color: #5f7fa2;
+}
+.verbal b {
+	display: block;
+	border-radius: 2px;
+}
+.verbal.hastag b {
+	background: grey;
+	color: #fff;
+}
+.verbal.hastag:hover b {
+	background: #5f7fa2;
+}
+.verbal:active { transform: scale(.9); }
+.current.fl_l .verbal { color: #b1bfcf; }
+.current.fl_l .verbal:hover { color: #fff; }
+.current.fl_l .verbal.hastag b {
+	background: #b1bfcf;
+	color: #5f7fa2;
+}
+.current.fl_l .verbal.hastag:hover b {
+	background: #fff;
+}
+#pad_playlist_panel .xpd,
+#audio.new .xpd { width: 424px; }
+#audio.new .audio.over.tag .title_wrap { width: 330px; }
+.audio .actions { z-index: 1; }
+.cut,
+.cut ~ .actions,
+#audio.new .cut ~ .actions>.fl_r>div,
+#pad_playlist_panel .cut ~ .actions>.fl_r>div {
+	visibility: hidden;
+}
+.over .cut,
+.open ~ .actions,
+#audio.new .open ~ .actions>.fl_r>div,
+#pad_playlist_panel .open ~ .actions>.fl_r>div {
+	visibility: visible;
+}
+.audio.over.tag .area {	background-color:transparent; }
+#pad_playlist_panel .over .cut ~ .actions .done,
+#audio.new .over .cut ~ .actions .done,
+.audio.over .open ~ .actions,
+.audio.over .area:hover { background-color:#edf1f5; }
+#pad_playlist_panel .current .cut ~ .actions .done,
+#audio.new .current .cut ~ .actions .done,
+.audio.current .open ~ .actions { background-color:#5f7fa2; }
+.choose_box .choose_audio_row { overflow:visible; }
+.font_medium .narrow_column .id3btn { left: 112px; }
+.xpd {
+	height:0;
+	cursor:auto;
+	overflow:hidden;
+	transition: height 0.33s ease-in-out;
+}
+.xpd .tag {
+	padding:5px 7px 0;
+}
+.xpd table {
+	border:0;
+	border-collapse:collapse;
+	border-bottom:white 10px solid;
+	min-width:150px;
+}
+.xpd tr th {
+	text-align:left;
+	padding:5px 7px;
+}
+.xpd th * {
+	float:right;
+	margin-left:5px;
+}
+.xpd th a {
+	text-decoration:none;
+	color:black;
+}
+.xpd .tag tr td {
+	padding:3px 7px;
+	vertical-align:top;
+}
+.xpd td + td {
+	word-break: break-word;
+}
+.ev {
+	background-color:#eee;
+}
+.pbr {
+	padding:5px;
+	float:left;
+	margin:0 10px 10px 0;
+}
+.pbr,
+.xpd th {
+	background:url(data:image/gif;base64,R0lGODlhAgACAJEAAAAAAP///8DAwAAAACwAAAAAAgACAAACA1QiBQA7);
+}
+#gp .controls .player,
+.pbr img { display:block; }
+.pictip {
+	position:absolute;
+	visibility:hidden;
+	background:rgba(0,0,0,0.5);
+}
+.xpd .pbr .tip {
+	color:#CCC;
+	padding:7px;
+}
+.pictip + .pictip .tip + .tip {
+	padding:7px;
+	cursor:pointer;
+}
+.pictip + .pictip .tip + .tip:hover {
+	color:white;
+}
+.xpd .fl_l.tip { padding-right:0; }
+.xpd .fl_r.tip { padding-left:0; }
+.wide_wall_module .dbl .pbr { margin-right: 0; }
+.wide_wall_module .dbl .pbr:nth-child(odd) {
+	float:right;
+	margin-left: -5px;
+}
+.controls {
+	top:36px;
+	position:absolute;
+}
+.controls a {
+	width:50px;
+	height:32px;
+	opacity:0.7;
+	margin-left:2px;
+	border-radius: 3px;
+	background-color:#d9e0e8;
+	background-position:center -64px;
+	display:inline-block;
+	position:static;
+}
+.controls a:active {
+	transform:scale(.95);
+}
+.audio .cut:hover,
+.controls a:hover {
+	opacity:1;
+}
+.controls a:first-child {
+	margin:0;
+}
+a.scrak {
+	background-position-y:0;
+}
+a.scrak:active {
+	background-position-y:-32px;
+}
+.audio .prev {
+	-webkit-transform:scaleX(-1);
+}
+.audio .prev:active {
+	transform:scale(-.95, .95);
+}
+.reverse .controls {
+	top: -34px;
+}
+.runline {
+	display: inline-block;
+	animation: runner 5s linear 0s infinite;
+}
+.runline span:after {
+	content: '\A0 \25CF \A0 ';
+}
+@keyframes runner {
+	0% { transform:translateX(0%); }
+	100% { transform:translateX(-50%); }
+}
+.spin {
+	-webkit-animation: rotate 2s linear 0s infinite;
+}
+@-webkit-keyframes rotate {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+.clr { clear:both }
+.xpd a { color: #06c; }
+.xpd a:visited { color: SlateBlue }
+.xpd a:active { color: red }
